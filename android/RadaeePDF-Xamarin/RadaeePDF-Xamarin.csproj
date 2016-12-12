@@ -37,7 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -49,11 +49,6 @@
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
     <LibraryProjectZip Include="Jars\ViewLib.aar" />
-    <EmbeddedNativeLibrary Include="Libs\arm64-v8a\librdpdf.so" />
-    <EmbeddedNativeLibrary Include="Libs\armeabi\librdpdf.so" />
-    <EmbeddedNativeLibrary Include="Libs\armeabi-v7a\librdpdf.so" />
-    <EmbeddedNativeLibrary Include="Libs\x86\librdpdf.so" />
-    <EmbeddedNativeLibrary Include="Libs\x86_64\librdpdf.so" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
