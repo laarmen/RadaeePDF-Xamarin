@@ -95,7 +95,7 @@ public class PDFLayoutView extends View implements LayoutListener
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
         {
-			if(m_layout == null) return false;
+			if(m_layout == null || true) return false;
         	if(m_status == STA_NONE && m_hold)
         	{
 	        	float dx = e2.getX() - e1.getX();
@@ -365,6 +365,7 @@ public class PDFLayoutView extends View implements LayoutListener
 		public void OnPDFOpen3D(String path);
         public void OnPDFZoomStart();
         public void OnPDFZoomEnd();
+		public void OnPDFScroll();
         public boolean OnPDFDoubleTapped( PDFLayout layout, float x, float y );
 	}
     class PDFVPageSet
@@ -652,6 +653,9 @@ public class PDFLayoutView extends View implements LayoutListener
                 m_layout.vSetX((int) (m_hold_docx + m_hold_x - event.getX()));
                 m_layout.vSetY((int) (m_hold_docy + m_hold_y - event.getY()));
                 invalidate();
+				if (m_listener != null) {
+					m_listener.OnPDFScroll();
+				}
             }
 			break;
 		case MotionEvent.ACTION_UP:
@@ -662,6 +666,9 @@ public class PDFLayoutView extends View implements LayoutListener
                 invalidate();
                 m_layout.vMoveEnd();
                 m_hold = false;
+				if (m_listener != null) {
+					m_listener.OnPDFScroll();
+				}
             }
 			break;
 		case MotionEvent.ACTION_POINTER_DOWN:
@@ -1823,6 +1830,26 @@ public class PDFLayoutView extends View implements LayoutListener
 	{
 		return m_pageno;
 	}
+	public final int PDFGetViewWidth() {
+		if (m_layout != null)
+			return m_layout.vGetTWidth();
+		return 0;
+	}
+	public final int PDFGetWindowWidth() {
+		if (m_layout != null)
+			return m_layout.vGetWidth();
+		return 0;
+	}
+	public final int PDFGetViewHeight() {
+		if (m_layout != null)
+			return m_layout.vGetTHeight();
+		return 0;
+	}
+	public final int PDFGetWindowHeight() {
+		if (m_layout != null)
+			return m_layout.vGetHeight();
+		return 0;
+	}
 	public final PDFPos PDFGetPos(int x, int y)
 	{
 		if(m_layout != null)
@@ -1837,6 +1864,19 @@ public class PDFLayoutView extends View implements LayoutListener
 			invalidate();
 		}
 	}
+
+	public final int PDFGetXOffset() {
+		if (m_layout != null)
+			return m_layout.vGetX();
+		return 0;
+	}
+
+	public final int PDFGetYOffset() {
+		if (m_layout != null)
+			return m_layout.vGetY();
+		return 0;
+	}
+
 	public void BundleSavePos(Bundle bundle)
 	{
 		if(m_layout != null)

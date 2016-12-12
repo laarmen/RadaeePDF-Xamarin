@@ -149,6 +149,11 @@ public class AboutActivity extends Activity implements PDFLayoutView.PDFLayoutLi
     }
 
     @Override
+    public void OnPDFScroll() {
+
+    }
+
+    @Override
     public boolean OnPDFDoubleTapped(PDFLayout layout, float x, float y) {
         return false;
     }

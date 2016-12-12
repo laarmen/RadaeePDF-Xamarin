@@ -430,6 +430,10 @@ public class PDFViewAct extends Activity implements PDFLayoutListener
     public void OnPDFZoomEnd() {
     }
 
+	@Override
+	public void OnPDFScroll() {
+	}
+
     @Override
     public boolean OnPDFDoubleTapped(PDFLayout layout, float x, float y)
 	{
