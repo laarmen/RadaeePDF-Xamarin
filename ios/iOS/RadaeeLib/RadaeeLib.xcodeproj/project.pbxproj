@@ -38,7 +38,7 @@
 		A864EF7C1D17EBA400F4B976 /* PDFVFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = A864EF421D17EBA300F4B976 /* PDFVFinder.m */; };
 		A864EF7D1D17EBA400F4B976 /* PDFVGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = A864EF431D17EBA300F4B976 /* PDFVGlobal.h */; };
 		A864EF7E1D17EBA400F4B976 /* PDFVGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = A864EF441D17EBA300F4B976 /* PDFVGlobal.m */; };
-		A864EF7F1D17EBA400F4B976 /* PDFView.h in Headers */ = {isa = PBXBuildFile; fileRef = A864EF451D17EBA300F4B976 /* PDFView.h */; };
+		A864EF7F1D17EBA400F4B976 /* PDFView.h in Headers */ = {isa = PBXBuildFile; fileRef = A864EF451D17EBA300F4B976 /* PDFView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A864EF801D17EBA400F4B976 /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = A864EF461D17EBA300F4B976 /* PDFView.m */; };
 		A864EF811D17EBA400F4B976 /* PDFVPage.h in Headers */ = {isa = PBXBuildFile; fileRef = A864EF471D17EBA300F4B976 /* PDFVPage.h */; };
 		A864EF821D17EBA400F4B976 /* PDFVPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A864EF481D17EBA300F4B976 /* PDFVPage.m */; };

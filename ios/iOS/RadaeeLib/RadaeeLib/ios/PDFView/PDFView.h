@@ -36,6 +36,9 @@
 - (void)OnAnnotSound:(NSString *)fileName;
 - (void)OnAnnotEditBox :(CGRect)annotRect :(NSString *)editText;
 - (void)OnAnnotCommboBox:(NSArray *)dataArray;
+- (void)OnDidScroll;
+- (void)OnZoomStart;
+- (void)OnZoomEnd;
 @end
 
 @interface PDFView : UIScrollView<PDFVInnerDel, UIScrollViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
@@ -155,6 +158,12 @@
 -(void)vGetPos :(struct PDFV_POS*)pos;
 //set position to left-top on the screen;
 -(void)vSetPos:(const struct PDFV_POS*)pos;
+
+//simple accessors
+-(int)vGetX;
+-(int)vGetY;
+-(int)vGetDocWidth;
+-(int)vGetDocHeight;
 
 //goto page.
 -(void)vGoto:(int)pageno;

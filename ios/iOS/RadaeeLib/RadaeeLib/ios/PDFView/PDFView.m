@@ -259,11 +259,15 @@ extern bool g_double_page_enabled;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [m_view vMoveTo:self.contentOffset.x * m_scale :self.contentOffset.y * m_scale];
+    
     [self refresh];
 
     CGRect rect = CGRectMake( self.contentOffset.x, self.contentOffset.y, m_w/m_scale, m_h/m_scale );
     m_child.frame = rect;
     m_child.backgroundColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0];
+    
+    if( m_delegate )
+        [m_delegate OnDidScroll];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -589,6 +593,18 @@ extern bool g_double_page_enabled;
         [self resignFirstResponder];
     }
     return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    NSLog(@"layoutSubviews: PDFView rect ：%f %f %f %f ",self.frame.origin.x, self.frame.origin.y,self.frame.size.width,self.frame.size.height);
+    m_w = self.frame.size.width * m_scale;
+    m_h = self.frame.size.height * m_scale;
+    //[m_view
+    [m_view vResize:m_w :m_h];
+    //[self resetZoomLevel];
+    [self refresh];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -1061,6 +1077,26 @@ extern bool g_double_page_enabled;
     pt.x = [m_view vGetX]/m_scale;
     pt.y = [m_view vGetY]/m_scale;
     self.contentOffset = pt;
+}
+
+-(int)vGetX
+{
+    return [m_view vGetX];
+}
+
+-(int)vGetY
+{
+    return [m_view vGetY];
+}
+
+-(int)vGetDocWidth
+{
+    return [m_view vGetDocW];
+}
+
+-(int)vGetDocHeight
+{
+    return [m_view vGetDocH];
 }
 
 -(void)vSelEnd

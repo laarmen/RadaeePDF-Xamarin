@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using Foundation;
-using RDPDFViewXamarin;
+using Com.Radaee.Pdf;
 using UIKit;
 
 namespace ReaderXamarin
