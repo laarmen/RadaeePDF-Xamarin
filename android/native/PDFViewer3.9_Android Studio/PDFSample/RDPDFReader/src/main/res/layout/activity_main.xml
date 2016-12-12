@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <Button
+        android:id="@+id/btn_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Browse And Open File" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_asset"
+        android:layout_below="@+id/btn_file"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/btn_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="ViewPager" />
+
+    <Button
+        android:id="@+id/btn_asset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="OpenAsset(ReadOnly)" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_asset"
+        android:text="Open From sdcard" />
+
+    <Button
+        android:id="@+id/btn_http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_sdcard"
+        android:text="Open Http Link(INTERNET access)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_disp"
+        android:layout_below="@+id/btn_http"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Using RGB_565"
+            android:id="@+id/btn_565"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Using ARGB_4444"
+            android:id="@+id/btn_4444"
+            android:layout_alignParentLeft="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_gl"
+        android:layout_below="@+id/layout_disp"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple OpenGL"
+        android:id="@+id/btn_gl"
+        android:layout_below="@+id/layout_disp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curl Pages"
+        android:id="@+id/btn_curl"
+        android:layout_below="@+id/btn_gl"
+        android:layout_alignParentLeft="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_adv"
+        android:layout_below="@+id/layout_gl"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advance"
+            android:id="@+id/btn_advance"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CreatePDF"
+            android:id="@+id/btn_create"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JavaScript"
+            android:id="@+id/btn_js"
+            android:layout_alignParentLeft="true" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:id="@+id/btn_about"
+        android:layout_below="@+id/layout_adv"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>
