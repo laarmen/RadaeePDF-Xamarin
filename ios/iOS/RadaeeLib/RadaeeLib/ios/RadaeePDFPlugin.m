@@ -209,22 +209,32 @@
 - (void)activateLicense:(NSArray *)command
 {
     [self pluginInitialize];
+    NSLog(@"plugin initialized");
     
     self.cdv_command = command;
     
     NSDictionary *params = (NSDictionary*) [self.cdv_command objectAtIndex:0];
+    NSLog(@"getting params");
     
     [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"bundle"] forKey:@"actBundleId"];
+    NSLog(@"setting bundle");
     [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"company"] forKey:@"actCompany"];
+    NSLog(@"setting company");
     [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"email"] forKey:@"actEmail"];
+    NSLog(@"setting email");
     [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"key"] forKey:@"actSerial"];
+    NSLog(@"setting key");
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:[[params objectForKey:@"licenseType"] intValue]] forKey:@"actActivationType"];
+    NSLog(@"setting type");
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+    NSLog(@"synchro");
     
     NSLog(@"set license");
     
     APP_Init();
+    NSLog(@"app init");
+    
 }
 
 #pragma mark - Settings

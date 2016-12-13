@@ -155,6 +155,7 @@ void APP_Init()
     [[NSUserDefaults standardUserDefaults] setBool:isActive forKey:@"actIsActive"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+/*
     NSString *cmaps_path = [[NSBundle mainBundle] pathForResource:@"cmaps" ofType:@"dat" inDirectory:@"cmaps"];
     NSString *umaps_path = [[NSBundle mainBundle] pathForResource:@"umaps" ofType:@"dat" inDirectory:@"cmaps"];
     NSString *cmyk_path = [[NSBundle mainBundle] pathForResource:@"cmyk_rgb" ofType:@"dat" inDirectory:@"cmaps"];
@@ -191,6 +192,7 @@ void APP_Init()
     Global_loadStdFont( 12, [fpath UTF8String] );
     fpath = [[NSBundle mainBundle] pathForResource:@"13" ofType:nil inDirectory:@"fdat"];
     Global_loadStdFont( 13, [fpath UTF8String] );
+    NSLog(@"fonts loaded");
     
     Global_fontfileListStart();
 
@@ -348,6 +350,7 @@ void APP_Init()
     Global_setDefaultFont("Korea1", "BousungEG-Light-GB", false);
     Global_setDefaultFont("Korea1", "BousungEG-Light-GB", true);
     Global_setAnnotFont( "Arimo" );//Global_setAnnotFont( "BousungEG-Light-GB" );
+*/
     
     
     Global_setAnnotTransparency(0x200040FF);
