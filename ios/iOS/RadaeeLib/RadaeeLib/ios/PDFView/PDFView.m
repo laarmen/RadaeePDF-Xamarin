@@ -1099,6 +1099,16 @@ extern bool g_double_page_enabled;
     return [m_view vGetDocH];
 }
 
+-(float)vGetDocScale
+{
+    return [m_view vGetScale];
+}
+
+-(float)vGetViewScale
+{
+    return m_scale;
+}
+
 -(void)vSelEnd
 {
     if( m_status == sta_sel )

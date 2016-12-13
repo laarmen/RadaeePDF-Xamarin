@@ -495,6 +495,10 @@ namespace Com.Radaee.Pdf
         int DocWidth { get; }
         [Export ("vGetDocHeight")]
         int DocHeight { get; }
+		[Export("vGetDocScale")]
+		float DocScale { get; }
+		[Export("vGetViewScale")]
+		float ViewScale { get; }
 
     }
     [BaseType (typeof(NSObject))]

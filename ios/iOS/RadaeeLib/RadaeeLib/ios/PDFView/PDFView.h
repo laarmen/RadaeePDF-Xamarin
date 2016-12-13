@@ -164,6 +164,8 @@
 -(int)vGetY;
 -(int)vGetDocWidth;
 -(int)vGetDocHeight;
+-(float)vGetDocScale;
+-(float)vGetViewScale;
 
 //goto page.
 -(void)vGoto:(int)pageno;
