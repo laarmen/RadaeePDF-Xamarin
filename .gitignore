@@ -1,3 +1,6 @@
 */.gradle
 */.idea
 */local.properties
+*/bin/
+*/obj/
+*/.DS_Store
