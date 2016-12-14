@@ -1,0 +1,7 @@
+ARM
+x64
+win32
+Debug
+.vs
+*.db
+*.opendb
