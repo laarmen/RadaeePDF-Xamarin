@@ -6,3 +6,5 @@ Debug
 *.db
 *.opendb
 */project.lock.json
+*/bin
+*/obj

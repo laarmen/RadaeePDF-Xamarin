@@ -1,7 +1,7 @@
 */.gradle
 */.idea
 */local.properties
-*/bin/
-*/obj/
+*/bin
+*/obj
 */.DS_Store
 *.un~
